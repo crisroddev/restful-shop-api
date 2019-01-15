@@ -11,6 +11,7 @@ mongoose
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@node-rest-shop-iha84.mongodb.net/test?retryWrites=true`, {
     useNewUrlParser: true
 });
+mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
